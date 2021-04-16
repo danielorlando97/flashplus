@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap');
+/*font-family: 'Playfair Display', serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+/*font-family: 'Fredoka One', cursive;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+/*font-family: 'Indie Flower', cursive;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+/*font-family: 'Shrikhand', cursive;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+/*font-family: 'Pattaya', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
+/*font-family: 'Frijole', cursive;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+/*font-family: 'Orelega One', cursive;*/
+
 html,
 body {
   padding: 0;
@@ -17,10 +40,6 @@ a {
   box-sizing: border-box;
 }
 
-label{
-  font-family:cursive;
-}
 h1 {
-  font-family:'Courier New', Courier, monospace;
-  -webkit-text-stroke-width: 1.5px;
+  font-family: 'Zilla Slab Highlight', cursive;
 }

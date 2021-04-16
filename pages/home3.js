@@ -6,18 +6,14 @@ import DirectoryBody from "../components/page.home/directory.list.body"
 function Home () {
 
   return(
-    <div className="relative h-screen w-screen overflow-scroll">
-      <div className="fixed z-20">
-        <div className="flex h-20 w-screen flex-col justify-center">
-          <OrangeBorder height="h-20"
-            componentName={ <h1 className="text-orange text-3xl">PaqtTV+</h1> }>
-            <AiOutlineEllipsis className="m-1 stroke-current stroke-0 text-gray-100 text-opacity-50 text-3xl"/>     
-          </OrangeBorder>
-        </div>
-        <DirectoryBar></DirectoryBar>
-      </div>
-      <div className="h-28 mt-2 w-screen"></div>
-      <DirectoryBody/>
+    <div className="flex flex-col space-y-4  m-6 h-screen w-screen overflow-scroll">
+      <h1 className="text-orange tracking-wider text-4xl">PaqtTV+</h1> 
+      <h2 className="text-orange tracking-wider text-4xl">PaqtTV+</h2> 
+      <h3 className="text-orange tracking-wider text-4xl">PaqtTV+</h3> 
+      <h4 className="text-orange tracking-wider text-4xl">PaqtTV+</h4> 
+      <h5 className="text-orange tracking-wider text-4xl">PaqtTV+</h5> 
+      <h6 className="text-orange tracking-wider text-4xl">PaqtTV+</h6> 
+
     </div>
   ) 
 }
