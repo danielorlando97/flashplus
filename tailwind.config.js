@@ -1,6 +1,7 @@
 module.exports = {
   purge: [ "./pages/*.js", 
            "./components/**/**/*.jsx",
+           "./components/**/**/*.js",
            "./components/**/*.jsx",
            "./components/**/*.js",
   ],
@@ -12,7 +13,7 @@ module.exports = {
     },
     extend: {
       colors:{
-        back: "#0f0f0f",
+        back: "#1a1a1a",
         orange: '#d2691e',
         body: '#070707'
       }
