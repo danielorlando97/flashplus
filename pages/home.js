@@ -1,6 +1,6 @@
 import { AiOutlineEllipsis } from "react-icons/ai"
-import {SimpleTopBarScaffolding} from "../component/scaffolding"
-import RouterBar from "../component/page.home/router.bar"
+import {SimpleTopBarScaffolding} from "../components/scaffolding"
+import RouterBar from "../components/page.home/router.bar"
 
 function Home () {
 
