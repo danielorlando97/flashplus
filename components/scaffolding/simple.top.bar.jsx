@@ -10,3 +10,10 @@ export default function Scaffolding({ componentName, children, height = "h-16" }
         </div> 
     )
 }
+
+export function OrangeBorder ({ componentName, children, height = "h-16" })
+{
+    return <Scaffolding componentName={componentName} height={height + " border-b-4 border-double border-orange"}>
+        {children}
+    </Scaffolding>
+}
