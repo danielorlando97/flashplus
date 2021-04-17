@@ -14,7 +14,9 @@ module.exports = {
     extend: {
       colors:{
         back: "#0f0f10",
-        orange: '#d2691e',
+        orange: '#d46b1f',
+        oranged: '#d36a1e',
+        orangedark: '#d2691e',
         body: '#070707'
       }
     },

@@ -40,6 +40,11 @@ a {
   box-sizing: border-box;
 }
 
+label
+{
+  font-family: serif;
+}
+
 h1 {
   font-family: 'Zilla Slab Highlight', cursive;
 }
