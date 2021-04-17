@@ -11,7 +11,7 @@ function Home () {
   return(
     <div className="relative h-screen w-screen overflow-scroll">
       <div className="fixed z-20">
-        <div className="flex h-20 w-screen flex-col justify-center border-b-4 border-double border-back">
+        <div className="flex h-20 w-screen flex-col justify-center border-b-8 border-double border-back">
           <div className="flex justify-between items-center w-full h-16 pl-2 pr-4">
             <BiLeftArrow className="m-1 stroke-current stroke-0 text-gray-100 text-opacity-50 text-xl"/>
             <h1 className="text-orange text-3xl">PaqtTV+</h1> 
@@ -29,10 +29,10 @@ function Home () {
 export function DirectoryBar() {
   const text = "Series\\ Ingles "
   return (
-      <div className="flex justify-between items-center w-full h-8 border-b-2 px-2 border-back" >
+      <div className="flex justify-between items-center w-full h-8 border-b px-2 border-back" >
           <div className="flex w-11/12 justify-start items-center" >
               <BiChevronsDown className="mr-2 stroke-current stroke-0 text-gray-100 text-opacity-50 text-xl"/>
-              <label className="text-gray-100 tracking-wider text-opacity-50 text-base">{text}</label>
+              <label className="text-gray-100 tracking-wider text-opacity-50 text-sm">{text}</label>
           </div>
           <BiCustomize className="mr-2 stroke-current stroke-0 text-gray-100 text-opacity-50 text-xl"/>
       </div>
