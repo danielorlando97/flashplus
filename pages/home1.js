@@ -29,7 +29,7 @@ function Home () {
 export function DirectoryBar() {
   const text = "Series\\ Ingles "
   return (
-      <div className="flex justify-between items-center w-full h-8 border-b px-2 border-back" >
+      <div className="flex justify-between items-center w-full h-8 px-2 " >
           <div className="flex w-11/12 justify-start items-center" >
               <BiChevronsDown className="mr-2 stroke-current stroke-0 text-gray-100 text-opacity-50 text-xl"/>
               <label className="text-gray-100 tracking-wider text-opacity-50 text-sm">{text}</label>
