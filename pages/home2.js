@@ -1,8 +1,7 @@
 import { AiOutlineEllipsis } from "react-icons/ai"
-import { BiLeftArrow } from "react-icons/bi"
 import { BsArrow90DegLeft } from "react-icons/bs"
-import { AiFillHome } from "react-icons/ai"
-import {SimpleTopBarScaffolding} from "../components/scaffolding"
+import { SiHomify } from "react-icons/si"
+import {CircleContainerScaffolding} from "../components/scaffolding"
 import RouterBar from "../components/page.home/router.bar"
 import DirectoryBody from "../components/page.home/directory.list.body"
 
@@ -11,9 +10,8 @@ function Home () {
   return(
     <div className="relative h-screen w-screen overflow-scroll">
       <div className="fixed z-20">
-        <div className="flex h-18 w-screen flex-col justify-center bg-back">
-          <div className="flex justify-between items-center w-full h-16 pl-2 pr-4">
-            <AiFillHome className="m-1 stroke-current stroke-0 text-gray-100 text-opacity-50 text-3xl"/>
+        <div className="flex h-16 w-screen flex-col justify-center bg-back">
+          <div className="flex justify-between items-center w-full h-16 px-4">
             <h1 className="text-orange text-3xl">PaqtTV+</h1> 
             <AiOutlineEllipsis className="m-1 stroke-current stroke-0 text-gray-100 text-opacity-50 text-3xl"/>     
           </div>
