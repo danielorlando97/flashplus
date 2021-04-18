@@ -12,6 +12,9 @@ module.exports = {
       topbar: '2px 11px 1px 5px  rgba(245, 158, 11, 0.55)' 
     },
     extend: {
+      spacing:{
+        '18':'4.3rem'
+      },
       colors:{
         back: "#0f0f10",
         orange: '#d46b1f',
