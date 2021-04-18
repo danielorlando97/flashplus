@@ -7,8 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 /*font-family: 'Indie Flower', cursive;*/
 
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-/*font-family: 'Shrikhand', cursive;*/
+
 
 @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
 /*font-family: 'Pattaya', sans-serif;*/
@@ -20,6 +19,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
 /*font-family: 'Orelega One', cursive;*/
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+/*font-family: 'PT Serif', serif;*/
 
 html,
 body {
@@ -42,9 +44,24 @@ a {
 
 label
 {
-  font-family: 'Orelega One', cursive;
+  font-family: 'Zilla Slab Highlight', cursive;
 }
 
 h1 {
   font-family: 'Zilla Slab Highlight', cursive;
+}
+h2 {
+  font-family: 'PT Serif', serif;
+}
+h3 {
+  font-family: 'Orelega One', cursive;
+}
+h4 {
+  font-family: 'Fredoka One', cursive;
+}
+h5 {
+  font-family: 'Pattaya', sans-serif;
+}
+h6 {
+  font-family: 'Playfair Display', serif;
 }

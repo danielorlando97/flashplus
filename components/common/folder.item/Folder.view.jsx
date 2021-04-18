@@ -2,11 +2,11 @@ import  LikedButtomComponent  from "../liked.button/Liked.logic"
 import {CircleContainerScaffolding, SumaryContainerScaffolding} from "../../scaffolding"
 
 function ElementName({children}) {
-    return <label className="text-gray-100 h-5 tracking-widest text-opacity-50 text-base">
+    return <label className="text-gray-100 h-5 tracking-wider text-opacity-50 text-base">
                 {children}</label>
 }
 function SumaryData({children}) {
-    return <label className="text-gray-200 text-opacity-25 tracking-widest italic text-xs">
+    return <label className="text-gray-200 text-opacity-25 tracking-wider italic text-xs">
                 {children}</label>
 }
 

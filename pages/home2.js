@@ -12,7 +12,7 @@ function Home () {
       <div className="fixed z-20">
         <div className="flex h-16 w-screen flex-col justify-center bg-back">
           <div className="flex justify-between items-center w-full h-16 px-4">
-            <h1 className="text-orange text-3xl">PaqtTV+</h1> 
+            <h1 className="text-orange text-4xl">PaqtTV+</h1> 
             <AiOutlineEllipsis className="m-1 stroke-current stroke-0 text-gray-100 text-opacity-50 text-3xl"/>     
           </div>
         </div>

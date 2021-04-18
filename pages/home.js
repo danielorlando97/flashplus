@@ -14,10 +14,8 @@ function Home () {
         <div className="flex h-16 w-screen flex-col justify-center bg-back">
           <div className="flex justify-between items-center w-full h-16 pl-2 pr-4">
             <div className="flex justify-between items-center w-1/2 h-full">
-              <CircleContainerScaffolding dimension="h-9 w-9">
-                <RiHomeGearLine className="m-1 text-gray-100 text-opacity-50 text-3xl"/>
-              </CircleContainerScaffolding>
-              <h1 className="text-orange text-3xl">PaqtTV+</h1> 
+              <RiHomeGearLine className="m-1 text-gray-100 text-opacity-50 text-3xl"/>
+              <h1 className="text-orange text-4xl">PaqtTV+</h1> 
             </div>
             <AiOutlineEllipsis className="m-1 stroke-current stroke-0 text-gray-100 text-opacity-50 text-3xl"/>     
           </div>
