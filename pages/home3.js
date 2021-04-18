@@ -12,7 +12,7 @@ function Home () {
       <div className="fixed z-20">
         <div className="flex h-16 w-screen flex-col justify-center bg-back">
           <div className="flex justify-between items-center w-full h-16 pl-2 pr-4">
-            <div className="flex justify-between items-center w-1/2 h-full">
+            <div className="flex justify-between items-center w-2/3 h-full">
               <CircleContainerScaffolding color="gray-100 border-opacity-50" dimension="h-10 w-10">
                 <SiHomify className="text-orange text-2xl"/>
               </CircleContainerScaffolding>

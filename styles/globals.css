@@ -44,24 +44,14 @@ a {
 
 label
 {
-  font-family: 'Zilla Slab Highlight', cursive;
+  font-family: 'PT Serif', serif;
+}
+
+p
+{
+  font-family: 'PT Serif', serif;
 }
 
 h1 {
   font-family: 'Zilla Slab Highlight', cursive;
-}
-h2 {
-  font-family: 'PT Serif', serif;
-}
-h3 {
-  font-family: 'Orelega One', cursive;
-}
-h4 {
-  font-family: 'Fredoka One', cursive;
-}
-h5 {
-  font-family: 'Pattaya', sans-serif;
-}
-h6 {
-  font-family: 'Playfair Display', serif;
 }
