@@ -11,10 +11,10 @@ function Home () {
   return(
     <div className="relative h-screen w-screen overflow-scroll">
       <div className="fixed z-20">
-        <div className="flex h-18 w-screen flex-col justify-center bg-back">
+        <div className="flex h-16 w-screen flex-col justify-center bg-back">
           <div className="flex justify-between items-center w-full h-16 pl-2 pr-4">
             <div className="flex justify-between items-center w-1/2 h-full">
-              <RiHomeGearFill className="m-1 text-gray-100 text-opacity-50 text-3xl"/>
+              <RiHomeGearFill className="m-1 text-gray-100 text-opacity-50 text-2xl"/>
               <h1 className="text-orange text-3xl">PaqtTV+</h1> 
             </div>
             <AiOutlineEllipsis className="m-1 stroke-current stroke-0 text-gray-100 text-opacity-50 text-3xl"/>     
