@@ -1,6 +1,7 @@
 import { AiOutlineEllipsis } from "react-icons/ai"
 import { BsArrow90DegLeft } from "react-icons/bs"
-import { SiHomify } from "react-icons/si"
+import { RiMenuAddFill } from "react-icons/ri"
+import { RiHomeGearLine } from "react-icons/ri"
 import {CircleContainerScaffolding} from "../components/scaffolding"
 import RouterBar from "../components/page.home/router.bar"
 import DirectoryBody from "../components/page.home/directory.list.body"
@@ -11,16 +12,14 @@ function Home () {
     <div className="relative h-screen w-screen overflow-scroll">
       <div className="fixed z-20">
         <div className="flex h-16 w-screen flex-col justify-center bg-back">
-          <div className="flex justify-between items-center w-full h-16 pl-2 pr-4">
-            <CircleContainerScaffolding color="gray-100" className="border-opacity-50" dimension="h-10 w-10">
-              <SiHomify className="text-orange text-2xl"/>
-            </CircleContainerScaffolding>
-            <h1 className="text-orange text-4xl">PaqtTV+</h1> 
-            <AiOutlineEllipsis className="m-1 stroke-current stroke-0 text-gray-100 text-opacity-50 text-3xl"/>     
+          <div className="flex justify-between items-center w-full h-16 px-4">
+            <h1 className="text-orange text-4xl">PaqtTV+</h1>             
+            <RiHomeGearLine className="m-1 text-gray-100 text-opacity-50 text-3xl"/>     
           </div>
         </div>
         <DirectoryBar></DirectoryBar>
       </div>
+
       <div className="h-24 mb-2 w-screen"></div>
       <DirectoryBody/>
     </div>
@@ -35,6 +34,7 @@ export function DirectoryBar() {
               <BsArrow90DegLeft className="mr-3 stroke-current stroke-0 text-gray-100 text-opacity-50 text-xl"/>
               <label className="text-gray-100 tracking-wider text-opacity-50 text-sm">{text}</label>
           </div>
+          <RiMenuAddFill className="mr-3 stroke-current stroke-0 text-gray-100 text-opacity-50 text-xl"/>
       </div>
   )
 }

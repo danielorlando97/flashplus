@@ -1,6 +1,6 @@
 import { AiOutlineEllipsis } from "react-icons/ai"
 import { BsArrow90DegLeft } from "react-icons/bs"
-import { BiChevronsDown } from "react-icons/bi"
+import { BiChevronsDown } from "react-icons/ri"
 import { RiHomeGearLine } from "react-icons/ri"
 import {CircleContainerScaffolding} from "../components/scaffolding"
 import RouterBar from "../components/page.home/router.bar"
@@ -22,6 +22,7 @@ function Home () {
         </div>
         <DirectoryBar></DirectoryBar>
       </div>
+
       <div className="h-24 mb-2 w-screen"></div>
       <DirectoryBody/>
     </div>
