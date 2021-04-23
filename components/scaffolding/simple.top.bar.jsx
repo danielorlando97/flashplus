@@ -1,15 +1,14 @@
-export default function Scaffolding({ componentName, children, height = "h-16" }) {
+export default function Scaffolding({ componentName, children, height = "h-16", className = "" }) {
     return ( 
-        <div className={"flex justify-between w-full " + height} >
-            <div className="flex justify-start items-center pl-6 w-full h-full">
-                {componentName}
-            </div> 
-            <div className="flex items-center pr-4" >
+        <div className={className + " flex justify-between items-center w-full " + height} >
+            {componentName}
+            <div className="flex space-x-1.5" >
                 {children}
             </div>
         </div> 
     )
 }
+
 
 export function OrangeBorder ({ componentName, children, height = "h-16" })
 {

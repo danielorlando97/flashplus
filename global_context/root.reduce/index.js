@@ -1,7 +1,7 @@
 import { reduce } from "./root.reduce"  
 
 export const rootInit = {
-    page : 0 
+    page : ""
 }
 
 export const rootReduce = reduce
