@@ -16,5 +16,5 @@ export default function DirectoryBody(){
         </div>
     )
  
-    return <DirectoryBodyView directory={directory}/>
+    return <DirectoryBodyView folders={directory.folders} files={directory.files}/>
 }

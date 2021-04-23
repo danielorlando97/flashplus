@@ -23,7 +23,7 @@ export default function Navigate(){
             console.log(temp)
             rootDispatch({
                 type : rootTypes.setPage,
-                value : temp.join('/ ')
+                value : temp.join('/')
             })
         }
     }

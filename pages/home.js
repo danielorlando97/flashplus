@@ -13,7 +13,7 @@ function Home () {
 
   return(
     <div className="relative h-screen w-screen overflow-scroll">
-      <div className="fixed z-20">
+      <div className="fixed z-20 bg-body" >
         <div className="flex h-16 w-screen flex-col justify-center bg-back">
           <SimpleTopBarScaffolding className="pl-4 pr-2"
             componentName={<h1 className="text-orange text-3xl">PaqtTV+</h1>}>             

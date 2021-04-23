@@ -6,7 +6,9 @@ export default client
 
 export function getByRoot(root){
     return async () => {
-        const { data } = await client.get(root)
+        const url = root.split("/").join(';')
+        console.log(url)
+        const { data } = await client.get(url)
         return data
     }
 } 

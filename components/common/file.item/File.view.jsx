@@ -10,16 +10,24 @@ function SumaryData({children}) {
                 {children}</label>
 }
 
-export default function FolderView ({icon, folder, handler}) { 
+export default function FileView ({icon, file, handler}) { 
+    const type = file.name.split(".")
+                          .pop()
+                          .toLowerCase()
+    const a = ""
+    a.substring()
     return (
         <div className="flex items-center w-screen pl-3 pr-4" >
             <CircleContainerScaffolding className="flex-grow-0" onClick={handler}>{icon}</CircleContainerScaffolding>
             <div className="flex flex-grow justify-between border-b border-back">                
                 <SumaryContainerScaffolding className="px-4 w-full" onClick={handler}
-                    elementName={<ElementName>{folder.name}</ElementName>}>
-                    <SumaryData>{folder.size}</SumaryData>
-                    <SumaryData>{folder.len + " elementos"}</SumaryData>
-                            
+                    elementName={<ElementName>{file.name}</ElementName>}>
+                    <SumaryData>{file.size}</SumaryData>
+                    <div className="flex justify-center items-center w-10 h-3.5 rounded-xl bg-orange">
+                        <label className="text-body tracking-wider font-bold text-xs">
+                            {type.length > 4 ? type.substring(0,4) : type}
+                        </label>
+                    </div>
                 </SumaryContainerScaffolding>
                 <div className="flex flex-row-reverse items-center " onClick={null}>
                     <LikedButtomComponent fontSize="text-2xl"/>
