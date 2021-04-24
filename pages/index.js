@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <Link href="/home">
+    <Link href="/home.setting">
       <div className="flex flex-col justify-around p-6 items-center  w-screen h-screen">
         <Head>
           <title>Create Next App</title>

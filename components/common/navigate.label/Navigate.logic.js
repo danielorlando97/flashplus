@@ -16,7 +16,7 @@ export default function Navigate(){
 
     const handlerChangeRoot = () => {
         
-        if (root === "") router.push('/')
+        if (root === "") router.push('/home.setting')
         else {
             let temp = root.split("/")
             temp.pop()
