@@ -1,9 +1,8 @@
-import Link from 'next/link'
-
-import { SiNextDotJs } from "react-icons/si"
-import { MdLocalMovies } from "react-icons/md"
-import { RiQuestionnaireLine } from "react-icons/ri"
-import { GoPackage } from "react-icons/go"
+import { FaEllipsisV } from "react-icons/fa"
+import { BsArrow90DegLeft } from "react-icons/bs"
+import { RiMenuAddFill } from "react-icons/ri"
+import { RiHomeGearLine } from "react-icons/ri"
+import { BiGridAlt } from "react-icons/bi"
 import { 
   AiOutlineSearch,
   AiOutlineUser,
@@ -12,41 +11,48 @@ import {
   AiOutlineCheckCircle,
   AiOutlineNotification } from "react-icons/ai"
 
-
-import {
-  SimpleTopBarScaffolding,
-  CircleContainerScaffolding,
-  ItemToListScaffolding } from "../components/scaffolding"
-import Folder from "../components/common/folder.item"
+import {SimpleTopBarScaffolding, CircleContainerScaffolding} from "../components/scaffolding"
+import NavigateLabel from "../components/common/navigate.label/Navigate.logic"
 import DirectoryBody from "../components/page.home/directory.list.body"
 
-const Icons = [
-  <AiOutlineCheckCircle className="text-gray-100 text-opacity-50 text-3xl"/>,
-  <MdLocalMovies className="text-gray-100 text-opacity-50 text-3xl"/>,
-  <AiOutlineNotification className="text-gray-100 text-opacity-50 text-3xl"/>,
-  <AiOutlineUser className="text-gray-100 text-opacity-50 text-3xl"/>,
-  <RiQuestionnaireLine className="text-gray-100 text-opacity-50 text-3xl"/>,
-  <SiNextDotJs className="text-gray-100 text-opacity-50 text-3xl"/>,
-  <AiOutlineHeart className="text-gray-100 text-opacity-50 text-3xl"/>,
-  <AiOutlineUsb className="text-gray-100 text-opacity-50 text-3xl"/>
-]
+
 
 function Home () {
+
   return(
-    <div className="flex flex-col space-y-2 top-0 left-0 h-screen w-screen">
-      <div className="relative h-1/3 w-full">
-			  <img className="absolute h-full w-full rounded-b-3xl z-10 "
+    <div className="relative h-screen w-screen overflow-scroll">
+      <div className="flex h-16 w-screen flex-col justify-center bg-back">
+        <SimpleTopBarScaffolding className="pl-4 pr-2"
+          componentName={<h1 className="text-orange text-3xl">PaqtTV+</h1>}>             
+          <RiHomeGearLine className="text-gray-100 text-opacity-50 text-3xl"/>     
+        </SimpleTopBarScaffolding>
+      </div>
+      <SimpleTopBarScaffolding height="h-8" className="px-3"
+        componentName={<NavigateLabel/>}>
+      
+      </SimpleTopBarScaffolding>
+    
+     <img className="h-2/5 w-full mt-1.5 "
             src="picture/Alexis & Fido - La Esencia (Abdel La Esencia).jpg"/>
-			  <h1 className="absolute text-gray-100 text-opacity-50 text-2xl 
-                       left-4 bottom-4 h-auto w-auto bg-body z-20">
-            Alexis y Figo
-        </h1>
-		  </div>
-      <div className="flex justify-between items-center w-screen h-10 border-back border-b pl-2 pr-4 ">
-        <AiOutlineCheckCircle className="text-gray-100 text-opacity-50 text-3xl"/>
-        <div className="flex space-x-3">
-          <AiOutlineHeart className="text-gray-100 text-opacity-50 text-3xl"/>
-          <AiOutlineUsb className="text-gray-100 text-opacity-50 text-3xl"/>
+    <div className="flex flex-col w-full space-y-3 pt-3 px-5">
+      <label className="text-gray-100 tracking-wider text-opacity-50 text-2xl">
+          Alexis y Figo - La Esencia</label>
+      <div className="flex items-center space-x-2">
+        <label className="text-gray-100 tracking-wider py-0.5 px-1 text-opacity-50 text-sm
+                            border-2 border-gray-100 border-opacity-50">MP3</label>
+        <label className="text-gray-100 tracking-wider py-0.5 px-1 text-opacity-50 text-sm
+                            border-2 border-gray-100 border-opacity-50">4000 MB</label>
+      </div>
+      <div className="flex justify-around items-center pt-5">
+          <CircleContainerScaffolding color="back" className="bg-back" dimension="16">
+            <AiOutlineUsb className="text-gray-100 text-opacity-50 text-3xl"/>
+          </CircleContainerScaffolding>
+          <CircleContainerScaffolding  dimension="16">
+            <AiOutlineNotification className="text-gray-100 text-opacity-50 text-3xl"/>
+          </CircleContainerScaffolding>
+          <CircleContainerScaffolding color="back" className="bg-back" dimension="16">
+              <AiOutlineHeart className="text-orange text-3xl"/>
+          </CircleContainerScaffolding>
         </div>
       </div>
     </div>
@@ -55,3 +61,5 @@ function Home () {
 
 
 export default Home
+
+
