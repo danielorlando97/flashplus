@@ -45,7 +45,7 @@ function Home () {
       <div className="grid grid-cols-4 place-items-center gap-2 w-full rounded-xl h-44 pt-1 bg-back">
         {list.map( (element,index) => 
           <div key={index} className="flex flex-col items-center space-y-2">
-            <CircleContainerScaffolding className="bg-body" color="back">
+            <CircleContainerScaffolding className="bg-body border-opacity-50 " color="gray-100">
               {Icons[element - 1]}
             </CircleContainerScaffolding>
             <label className="text-gray-100 text-opacity-50 tracking-wider text-xs">Name</label>

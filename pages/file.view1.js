@@ -20,7 +20,7 @@ function Home () {
   const list = [1,2,3,4]
   return(
     <div className="relative h-screen w-screen overflow-scroll">
-      <img className="h-2/5 w-full"
+      <img className="h-80 w-full"
             src="picture/Alexis & Fido - La Esencia (Abdel La Esencia).jpg"/>
       <div className="flex flex-col w-full space-y-3 pt-3 px-5">
         <label className="text-gray-100 tracking-wider text-opacity-50 text-2xl">
@@ -33,7 +33,7 @@ function Home () {
         </div>
       
       <div className="absolute bottom-0 left-0 w-screen h-20 px-5 z-20">
-        <div className="grid grid-cols-4 place-items-center w-full h-16 gap-2 border-2 border-orange rounded-xl bg-back">
+        <div className="grid grid-cols-4 place-items-center w-full h-16 gap-2 border-2 border-back rounded-xl ">
           {list.map( (element,index) => 
             <div key={index} className="flex flex-col items-center space-y-2">
               <CircleContainerScaffolding className="bg-body" color="back" >
@@ -50,5 +50,3 @@ function Home () {
 
 
 export default Home
-
-

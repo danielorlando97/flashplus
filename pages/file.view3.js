@@ -33,10 +33,10 @@ function Home () {
         </div>
       
       <div className="absolute bottom-0 left-0 w-screen h-20 px-5 z-20">
-        <div className="grid grid-cols-4 place-items-center w-full h-16 gap-2 border-2 border-back rounded-xl ">
+        <div className="grid grid-cols-4 place-items-center w-full h-16 gap-2 border-2 border-gray-100 border-opacity-50 rounded-xl ">
           {list.map( (element,index) => 
             <div key={index} className="flex flex-col items-center space-y-2">
-              <CircleContainerScaffolding className="bg-body"  >
+              <CircleContainerScaffolding className="bg-body border-opacity-50 " color="gray-100"  >
                 {Icons[element - 1]}
               </CircleContainerScaffolding>
             </div> )}
@@ -50,4 +50,3 @@ function Home () {
 
 
 export default Home
-
