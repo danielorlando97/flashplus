@@ -44,13 +44,13 @@ function Home () {
                             border-2 border-gray-100 border-opacity-50">4000 MB</label>
       </div>
       <div className="flex justify-around items-center pt-5">
-          <CircleContainerScaffolding color="back" className="bg-back" dimension="16">
+          <CircleContainerScaffolding color="back" className="bg-back" dimension="h-16 w-16">
             <AiOutlineUsb className="text-gray-100 text-opacity-50 text-3xl"/>
           </CircleContainerScaffolding>
-          <CircleContainerScaffolding  dimension="16">
+          <CircleContainerScaffolding  dimension="h-16 w-16">
             <AiOutlineNotification className="text-gray-100 text-opacity-50 text-3xl"/>
           </CircleContainerScaffolding>
-          <CircleContainerScaffolding color="back" className="bg-back" dimension="16">
+          <CircleContainerScaffolding color="back" className="bg-back" dimension="h-16 w-16">
               <AiOutlineHeart className="text-orange text-3xl"/>
           </CircleContainerScaffolding>
         </div>
