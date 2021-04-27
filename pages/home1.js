@@ -13,9 +13,11 @@ function Home () {
 
   return(
     <div className="relative h-screen w-screen overflow-scroll">
-      <CircleContainerScaffolding className="fixed bg-body bottom-2 right-2 z-30"  dimension="h-16 w-16">
-        <GoThreeBars className="text-gray-100 text-opacity-50 text-3xl"/>
-      </CircleContainerScaffolding>
+      <div className="fixed bg-body bottom-4 right-2 z-30 rounded-full border-body ">
+        <div className="flex justify-center items-center bg-gray-100 bg-opacity-50 rounded-full h-16 w-16">
+          <GoThreeBars className="text-back text-3xl"/>
+        </div>
+      </div>
       <div className="fixed z-20 bg-body" >
         <div className="flex h-16 w-screen flex-col justify-center bg-back">
           <SimpleTopBarScaffolding className="pl-4 pr-3"
