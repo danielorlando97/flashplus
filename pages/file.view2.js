@@ -36,7 +36,7 @@ function Home () {
         <div className="grid grid-cols-4 place-items-center w-full h-16 gap-2 border-2 border-orange rounded-xl ">
           {list.map( (element,index) => 
             <div key={index} className="flex flex-col items-center space-y-2">
-              <CircleContainerScaffolding className="bg-body"  >
+              <CircleContainerScaffolding className="bg-body" color="back" >
                 {Icons[element - 1]}
               </CircleContainerScaffolding>
             </div> )}

@@ -1,4 +1,5 @@
 import { TiArrowBackOutline } from "react-icons/ti"
+import { BiLike } from 'react-icons/bi'
 import { 
   AiOutlineUsb,
   AiOutlineHeart,
@@ -10,6 +11,7 @@ import DirectoryBody from "../components/page.home/directory.list.body"
 
 const Icons = [
   <TiArrowBackOutline className="text-gray-100 text-opacity-50 text-3xl"/>,
+  <BiLike className="text-gray-100 text-opacity-50 text-3xl"/>,
   <AiOutlineUsb className="text-gray-100 text-opacity-50 text-3xl"/>,
   <AiOutlineNotification className="text-gray-100 text-opacity-50 text-3xl"/>,
   <AiOutlineHeart className="text-gray-100 text-opacity-50 text-3xl"/>,
@@ -17,9 +19,15 @@ const Icons = [
 
 
 function Home () {
-  const list = [1,2,3,4]
+  const list = [1,2,3,4, 5]
   return(
     <div className="relative h-screen w-screen overflow-scroll">
+        <div className="grid grid-cols-5  py-2 w-full h-12 divide-x divide-gray-100 divide-opacity-50 ">
+          {list.map( (element,index) => 
+            <div key={index} className="flex justify-center items-center ">
+                {Icons[element - 1]}
+            </div> )}
+        </div>
       <img className="h-80 w-full"
             src="picture/Alexis & Fido - La Esencia (Abdel La Esencia).jpg"/>
       <div className="flex flex-col w-full space-y-3 pt-3 px-5">
@@ -32,16 +40,9 @@ function Home () {
                             border-2 border-gray-100 border-opacity-50">4000 MB</label>
         </div>
       
-      <div className="absolute bottom-0 left-0 w-screen h-20 px-5 z-20">
-        <div className="grid grid-cols-4 place-items-center w-full h-16 gap-2 border-2 border-gray-100 border-opacity-50 rounded-xl ">
-          {list.map( (element,index) => 
-            <div key={index} className="flex flex-col items-center space-y-2">
-              <CircleContainerScaffolding className="bg-body border-opacity-50 " color="gray-100"  >
-                {Icons[element - 1]}
-              </CircleContainerScaffolding>
-            </div> )}
-        </div>
-      </div>
+    
+
+
 
       </div>
     </div>
