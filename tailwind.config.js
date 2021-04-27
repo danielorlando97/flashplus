@@ -18,7 +18,7 @@ module.exports = {
       colors:{
         back: "#0f0f10",
         orange: '#d46b1f',
-        oranged: '#d36a1e',
+        oranged: '#eb984e',
         orangedark: '#d2691e',
         body: '#070707'
       }
