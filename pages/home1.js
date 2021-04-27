@@ -13,7 +13,7 @@ function Home () {
 
   return(
     <div className="relative h-screen w-screen overflow-scroll">
-      <CircleContainerScaffolding className="fixed bg-body bottom-2 right-2 z-30" color="back" dimension="h-16 w-16">
+      <CircleContainerScaffolding className="fixed bg-body bottom-2 right-2 z-30"  dimension="h-16 w-16">
         <GoThreeBars className="text-gray-100 text-opacity-50 text-3xl"/>
       </CircleContainerScaffolding>
       <div className="fixed z-20 bg-body" >
@@ -36,3 +36,4 @@ function Home () {
 
 
 export default Home
+
