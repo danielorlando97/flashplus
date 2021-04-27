@@ -5,7 +5,7 @@ import { RiHomeGearLine } from "react-icons/ri"
 import { BiGridAlt } from "react-icons/bi"
 import { AiOutlineSearch } from "react-icons/ai"
 
-import {SimpleTopBarScaffolding} from "../components/scaffolding"
+import {SimpleTopBarScaffolding, CircleContainerScaffolding} from "../components/scaffolding"
 import NavigateLabel from "../components/common/navigate.label/Navigate.logic"
 import DirectoryBody from "../components/page.home/directory.list.body"
 
@@ -13,6 +13,9 @@ function Home () {
 
   return(
     <div className="relative h-screen w-screen overflow-scroll">
+      <CircleContainerScaffolding className="fixed bg-orange bottom-2 right-2 z-30" dimension="h-16 w-16">
+        <AiOutlineSearch className="text-gray-100 text-opacity-50 text-3xl"/>
+      </CircleContainerScaffolding>
       <div className="fixed z-20 bg-body" >
         <div className="flex h-16 w-screen flex-col justify-center bg-back">
           <SimpleTopBarScaffolding className="pl-4 pr-2"
