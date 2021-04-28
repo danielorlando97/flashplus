@@ -39,9 +39,9 @@ function Home () {
       <div className="sticky -top-0.5 bg-body py-1">
         <SimpleTopBarScaffolding height="h-8" className="px-3 border-b border-back"
           componentName={<NavigateLabel/>}>
-          <BiSelectMultiple  className=" stroke-current stroke-0 text-gray-100 text-opacity-50 text-lg"/>
-          <BiSort  className=" stroke-current stroke-0 text-gray-100 text-opacity-50 text-lg"/>
-          <BiGridAlt className="stroke-current stroke-0 text-gray-100 text-opacity-50 text-lg"/>
+          <BiSelectMultiple  className="m-1 stroke-current stroke-0 text-gray-100 text-opacity-50 text-lg"/>
+          <BiSort  className="m-1 stroke-current stroke-0 text-gray-100 text-opacity-50 text-lg"/>
+          <BiGridAlt className="m-1 stroke-current stroke-0 text-gray-100 text-opacity-50 text-lg"/>
         </SimpleTopBarScaffolding>
       </div>
 

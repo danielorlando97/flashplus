@@ -1,6 +1,6 @@
 import LikedButtomComponent  from "../liked.button/Liked.logic"
 import {CircleContainerScaffolding, SumaryContainerScaffolding} from "../../scaffolding"
-import { FaEllipsisV } from "react-icons/fa"
+import { AiOutlineMore } from "react-icons/ai"
 
 function ElementName({children}) {
     return <label className="text-gray-100 h-5 tracking-wider text-opacity-50 text-base">
@@ -31,7 +31,7 @@ export default function FileView ({icon, file, handler}) {
                     </div>
                 </SumaryContainerScaffolding>
                 <div className="flex flex-row-reverse items-center " onClick={null}>
-                    <FaEllipsisV className="m-1 text-gray-100 text-opacity-50 text-xl"/>
+                    <AiOutlineMore className="m-1 text-gray-100 text-opacity-50 text-xl"/>
                 </div>
             </div>
         </div>
