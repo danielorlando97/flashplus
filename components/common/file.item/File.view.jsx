@@ -1,5 +1,6 @@
 import LikedButtomComponent  from "../liked.button/Liked.logic"
 import {CircleContainerScaffolding, SumaryContainerScaffolding} from "../../scaffolding"
+import { FaEllipsisV } from "react-icons/fa"
 
 function ElementName({children}) {
     return <label className="text-gray-100 h-5 tracking-wider text-opacity-50 text-base">
@@ -17,7 +18,7 @@ export default function FileView ({icon, file, handler}) {
     const a = ""
     a.substring()
     return (
-        <div className="flex items-center w-screen pl-3 pr-4" >
+        <div className="flex items-center w-screen pl-3" >
             <CircleContainerScaffolding className="flex-grow-0" onClick={handler}>{icon}</CircleContainerScaffolding>
             <div className="flex flex-grow justify-between border-b border-back">                
                 <SumaryContainerScaffolding className="px-4 w-full" onClick={handler}
@@ -30,7 +31,7 @@ export default function FileView ({icon, file, handler}) {
                     </div>
                 </SumaryContainerScaffolding>
                 <div className="flex flex-row-reverse items-center " onClick={null}>
-                    <LikedButtomComponent fontSize="text-2xl"/>
+                    <FaEllipsisV className="m-1 text-gray-100 text-opacity-50 text-xl"/>
                 </div>
             </div>
         </div>

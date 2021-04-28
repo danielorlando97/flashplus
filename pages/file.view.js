@@ -1,8 +1,7 @@
 import { TiArrowBackOutline } from "react-icons/ti"
-import { 
-  AiOutlineUsb,
-  AiOutlineHeart,
-  AiOutlineNotification } from "react-icons/ai"
+import { MdPlaylistAdd,
+        MdNotificationsOff } from "react-icons/md"
+import { AiOutlineComment } from "react-icons/ai"
 
 import {SimpleTopBarScaffolding, CircleContainerScaffolding} from "../components/scaffolding"
 import NavigateLabel from "../components/common/navigate.label/Navigate.logic"
@@ -10,9 +9,9 @@ import DirectoryBody from "../components/page.home/directory.list.body"
 
 const Icons = [
   <TiArrowBackOutline className="text-gray-100 text-opacity-50 text-3xl"/>,
-  <AiOutlineUsb className="text-gray-100 text-opacity-50 text-3xl"/>,
-  <AiOutlineNotification className="text-gray-100 text-opacity-50 text-3xl"/>,
-  <AiOutlineHeart className="text-gray-100 text-opacity-50 text-3xl"/>,
+  <MdPlaylistAdd className="text-gray-100 text-opacity-50 text-4xl"/>,
+  <MdNotificationsOff className="text-gray-100 text-opacity-50 text-3xl"/>,
+  <AiOutlineComment className="text-gray-100 text-opacity-50 text-3xl"/>,
 ]
 
 
