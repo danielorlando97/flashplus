@@ -1,22 +1,18 @@
 import '../styles/globals.css'
 import '../styles/tailwind.css'
-import {AppContextProvider} from "../global_context/app.global.context"
 import { QueryClient, QueryClientProvider } from "react-query"
+import { DependencyProvider } from '../app/hook.features/dependencyContext'
 
 const queryClient = new QueryClient()
-
 
 function MyApp({ Component, pageProps }) {
   return ( 
     <QueryClientProvider client={queryClient}>
-      <AppContextProvider>
-       <Component {...pageProps} />
-      </AppContextProvider>
-    </QueryClientProvider>
-    
+        <DependencyProvider>
+          <Component {...pageProps} />
+        </DependencyProvider>
+    </QueryClientProvider>    
   )
 }
-
-
 
 export default MyApp

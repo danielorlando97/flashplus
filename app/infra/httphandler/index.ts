@@ -1,0 +1,1 @@
+export { axiosGetHandler } from './get.handler'

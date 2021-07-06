@@ -1,0 +1,1 @@
+export { useGetDirectory } from './use.get.directory'

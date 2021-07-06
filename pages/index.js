@@ -4,10 +4,10 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <Link href="/home.setting">
+    <Link href="/folder?path=/">
       <div className="flex flex-col justify-around p-6 items-center  w-screen h-screen">
         <Head>
-          <title>Create Next App</title>
+          <title>Flash+</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         
