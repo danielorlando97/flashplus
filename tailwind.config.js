@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: [ "./pages/*.js",
            "./pages/*.tsx",
@@ -7,6 +9,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      yellow: colors.orange,
+      red: colors.red,
+      gray: colors.coolGray
+    },
+
     boxShadow:{
       topbar: '2px 11px 1px 5px  rgba(245, 158, 11, 0.55)' 
     },

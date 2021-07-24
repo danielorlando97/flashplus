@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState, useCallback } from 'react'
 
-export function useRoutingByPath(path : string ) : [string, () => void, (name: string) => void] {
+export function useRoutingByPath(path : string, route:string) : [string, () => void, (name: string) => void] {
     const [state, setState] = useState<string>('')
     const router = useRouter()
 
@@ -17,7 +17,7 @@ export function useRoutingByPath(path : string ) : [string, () => void, (name: s
                 temp.pop()
                 const newPath = temp.length == 1? "/" : temp.join('/')
                 setState(newPath)
-                router.push(`/folder?path=${newPath}`)
+                router.push(`${route}=${newPath}`)
             } 
         }
     }, [state])
@@ -26,7 +26,7 @@ export function useRoutingByPath(path : string ) : [string, () => void, (name: s
         return (name: string) => {
             const newPath = state + (state === '/' ? name : '/' + name)
             setState(newPath)
-            router.push(`/folder?path=${newPath}`) 
+            router.push(`${route}=${newPath}`) 
         }
     }, [state])
 

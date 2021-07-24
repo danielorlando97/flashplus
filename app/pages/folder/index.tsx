@@ -6,6 +6,7 @@ import { folderModel } from '../../domain/directory/model'
 
 // Components ////////////////////////////////////////////////////////////////
 import { NameInBorder } from '../components/styles.name.in.border'
+import { NameSystem } from '../components/styles.name'
 import { CentralGridContainer } from '../components/container.grid.4.center'
 import { IconsStyle } from '../components/styles.icons' 
 import { TopBar } from '../components/container.top.bar.between.space'
@@ -48,7 +49,7 @@ const ButtomSubcribes : FC = () => {
 
 export default function View() {
     const [loading, query] = useGetQuery()
-    const [path, backHandler, nextHandler ] = useRoutingByPath(loading? '' : (query.path as string) )
+    const [path, backHandler, nextHandler ] = useRoutingByPath(loading? '' : (query.path as string), '/folder?path' )
     const { isLoading, isError, error, data } = useGetDirectory(path)
 
     if (loading || isLoading) return <div/>
@@ -58,7 +59,7 @@ export default function View() {
     return (
         <div className='relative w-screen h-screen overflow-auto overscroll-none'>
           <div className="w-srceen px-4 pt-3">
-            <NameInBorder.Component name="PaqtTV+" className={NameInBorder.compose('text-orange text-3xl')}>
+            <NameInBorder.Component name="PaqtTV+" className={NameInBorder.compose(NameSystem.compose('text-3xl'))}>
                 <CentralGridContainer.Component>
                     <ButtomHome/>
                     <ButtomCopyList/>
@@ -82,8 +83,13 @@ export default function View() {
             </TopBar.BetweenSpace>
           </div>
           <div className='w-full px-3'>
-            <Folders.Component className='mt-2 pb-1' folders={data.folder} next={nextHandler} color='back' />
-            <Files.Component className='mt-2 pb-1' files={data.file} color='back' />
+            <Folders.Component className='mt-2 pb-1' folders={data.folder} next={nextHandler} color='back'>
+                <Folders.ButtomOpcion></Folders.ButtomOpcion>
+            </Folders.Component>
+            
+            <Files.Component className='mt-2 pb-1' files={data.file} color='back'>
+                <Folders.ButtomOpcion></Folders.ButtomOpcion>
+            </Files.Component>
           </div>
         
         </div>

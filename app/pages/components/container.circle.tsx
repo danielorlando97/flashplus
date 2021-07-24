@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { IProps, color, opacity, size, textStyle, numberSize } from './@types'
+import { IProps, color, size, gradient, numberSize } from './@types'
 
 export namespace CircleContainer {
     export const Component : FC<IProps> = ({className, children, onClick}) => {
@@ -15,5 +15,28 @@ export namespace CircleContainer {
     Component.defaultProps = {
         className : compose("")
     }
+
+    export interface Props extends IProps{
+        size : numberSize,
+        bg?: color,
+        border?: string,
+        width : 1 | 2 | 3
+    }
+
+    export const ActificialBorder : FC<Props> = ({className, children, onClick, size, bg, border, width})=> {
+        const rsize : number = +size - width 
+        return <div className={`${className} ${border} h-${size} w-${size} flex justify-center items-center rounded-full`} onClick={onClick}>
+            <div className={`${className} bg-${bg} h-${rsize} w-${rsize} flex justify-center items-center rounded-full`}>
+                {children}
+            </div>
+        </div>
+    }
+
+    ActificialBorder.defaultProps = {
+        border : gradient,
+        bg : 'body'
+    }
+
+
 }
 
