@@ -3,12 +3,14 @@ import { useQuery, QueryFunction, QueryKey } from 'react-query'
 import { TreeDirClient } from '../infra/treeDirectory'
 import { CopyListInSession } from '../infra/SessionCache'
 
-import { GetDirectoryByPath, DirectoryMapper, DirectoryRepository, FoldersMapper, FilesMapper } from '../domain/directory'
+import { GetDirectoryByPath, DirectoryMapper, GetItemsByList,
+         DirectoryRepository, FoldersMapper, FilesMapper } from '../domain/directory'
 import { directoryModel } from '../domain/directory/model'
 
 
 type depList = {
-    getDirectoryByPath: GetDirectoryByPath
+    getDirectoryByPath: GetDirectoryByPath,
+    getItemsByList: GetItemsByList
 }
 
 export const DepContext = createContext<depList | null>(null)
@@ -27,7 +29,8 @@ export const DependencyProvider : React.FC = ({children}) => {
     const directoryMap : DirectoryMapper = new DirectoryMapper(foldersMap, filesMap)
 
     const deplist : depList = {
-        getDirectoryByPath: new GetDirectoryByPath(directoryRepo, directoryMap, copyListInSession)
+        getDirectoryByPath: new GetDirectoryByPath(directoryRepo, directoryMap, copyListInSession),
+        getItemsByList: new GetItemsByList(directoryRepo, directoryMap)
     }
 
     return <DepContext.Provider value = {deplist}> {children}</DepContext.Provider>

@@ -7,7 +7,7 @@ export namespace HttpClient {
     export type getParams = {
         url : string,
         query? : {
-            [index : string] : string | number
+            [index : string] : string | string[]
         }
     }
 }

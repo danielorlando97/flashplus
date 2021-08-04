@@ -36,7 +36,8 @@ module.exports = {
   variants: {
     extend: {},
     borderRadius : ["hover"],
-    borderWidth : ["hover"]
+    borderWidth : ["hover"],
+    overflow : ["hover", 'focus'],
   },
   plugins: [],
 }

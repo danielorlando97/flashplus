@@ -3,31 +3,50 @@ import { IconsStyle } from '../components/styles.icons'
 import { gradient } from '../components/@types'
 import { BiSort, BiSelectMultiple, BiArrowBack } from "react-icons/bi"
 import { Folders } from '../folder/folders'
+import { Files } from '../folder/files'
 import { MdNotificationsActive, MdDelete } from "react-icons/md"
+import { useGetItemsInCopyList } from '../../hook.features/sessionCache/useCopyList' 
+import { folderModel, fileModel } from '../../domain/directory/model' 
+import { useRouter } from 'next/router'
 
+function isFolder(item) : item is folderModel {
+    if (item.len === undefined) return false
 
-const list= [
-    { name : 'la que se avecina',
-      len: 18,
-      size: '3GB'},
-]
+    return true
+}
 
 
 export default function Page () {
+    const [totalSize, items, deleteHandler] = useGetItemsInCopyList( (a,b) => {return a.size < b.size ? 1 : -1} )
+    const router = useRouter()
+
     return (
         <div className='relative h-screen w-screen p-3'>
             <div className='flex justify-between items-center w-full h-14 border-b-4 border-back'>
-                <IconsStyle.Component Component={BiArrowBack} size='xl'/>
+                <IconsStyle.Component Component={BiArrowBack} size='xl' onClick={()=> router.push('/')}/>
                 <DataLabel.Component size='xl'>Lista de Copia</DataLabel.Component>
                 <div className='flex space-x-2 items-center h-full'>
                     <IconsStyle.Component Component={BiSelectMultiple} size='xl'/>
                     <IconsStyle.Component Component={BiSort} size='xl'/>
                 </div>
             </div>
-            <Folders.Component className='mt-2 pb-1' folders={list} color='back'>
-                <IconsStyle.Component Component={MdDelete} size='2xl' className={IconsStyle.compose('ml-5 mr-2')} ></IconsStyle.Component>
-                <IconsStyle.Component Component={MdNotificationsActive} size='2xl' ></IconsStyle.Component>
-            </Folders.Component>
+
+            <div className='w-full'>
+                {items.map(item => {
+                    if (isFolder(item)) { 
+                        return <Folders.Style className='mt-2 pb-1' folder={item} borderConfig={`border-b border-back`} key={item.path} >
+                                    <IconsStyle.Component Component={MdDelete} size='2xl' className={IconsStyle.compose('ml-5 mr-2')} onClick={deleteHandler(item.path)} />
+                                    <IconsStyle.Component Component={MdNotificationsActive} size='2xl' />
+                                </Folders.Style>
+                    }
+
+                    return <Files.Style className='mt-2 pb-1' file={item} borderConfig={`border-b border-back`} key={item.path}>
+                                <IconsStyle.Component Component={MdDelete} size='2xl' className={IconsStyle.compose('ml-5 mr-2')} onClick={deleteHandler(item.path)}/>
+                                <IconsStyle.Component Component={MdNotificationsActive} size='2xl' />
+                            </Files.Style>
+                })}
+                
+            </div>
 
             <div className='absolute bottom-0 left-0 h-1/6 w-full p-3 bg-body'>
                 <div className='flex flex-col justify-center items-center h-full w-full border-t-4 border-back'>

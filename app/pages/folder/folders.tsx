@@ -7,8 +7,7 @@ import { CircleContainer } from '../components/container.circle'
 import { DataLabel } from '../components/style.label.data'
 import { IconsStyle } from '../components/styles.icons'
 import { SummaryContainer } from '../components/container.summary.data'
-import { Option } from '../components/options'
-import { useBooleanState } from '../../hook.features/use.boolean.state'
+import { OptionView } from '../components/options.view'
 
 export namespace Folders {
     export interface Props extends IProps {
@@ -26,26 +25,10 @@ export namespace Folders {
         return <div className='w-full h-auto'>
             { folders.map((folder) => 
                 <Style folder={folder} className={className} borderConfig={`border-b border-${color}`} onClick={ ()=>{ next(folder.name) }} key={folder.name}>
-                    {children}
+                    <OptionView.Componet nameFile={'folder:  ' + folder.name} item={folder}/>
                 </Style>
             )}
         </div>
-    }
-
-    export const ButtomOpcion : FC = () => {
-        const [state, change] = useBooleanState(false)
-    
-        if (! state) return <IconsStyle.Component Component={AiOutlineMore} size='xl' onClick={change}/>
-        return (
-            <Option.BackSpace onClick={change}>
-                <Option.Item onClick={()=> {}}>
-                    <DataLabel.Component size='sm'> Añadir a la copia </DataLabel.Component>
-                </Option.Item>
-                <Option.Item onClick={()=> {}}>
-                    <DataLabel.Component size='sm'> Subcribirse </DataLabel.Component>
-                </Option.Item>
-            </Option.BackSpace>
-        )
     }
     
     export const Style : FC<StyleProps> = ({folder, onClick, className, borderConfig, children}) => {

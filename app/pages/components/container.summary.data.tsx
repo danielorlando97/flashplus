@@ -9,7 +9,7 @@ export namespace SummaryContainer {
 
     export const Component : FC<Props> = ({name, nameSize, className, children, onClick}) => {
         return (
-            <div className="flex flex-col justify-center items-start pb-1 space-y-0.5 w-full"  onClick={onClick}>
+            <div className="flex flex-col justify-center items-start pb-1 space-y-1 w-full"  onClick={onClick}>
                 <label className={`${className} text-${nameSize}`}> {name} </label>
                 <div className="flex items-center space-x-2">
                     {children}

@@ -4,7 +4,7 @@ import { fileModel } from '../../domain/directory/model'
 import { AiOutlineMore } from "react-icons/ai"
 import { CircleContainer } from '../components/container.circle'
 import { DataLabel } from '../components/style.label.data'
-import { IconsStyle } from '../components/styles.icons'
+import { OptionView } from '../components/options.view'
 import { SummaryContainer } from '../components/container.summary.data'
 
 export namespace Files {
@@ -20,9 +20,9 @@ export namespace Files {
 
     export const Component : FC<Props> = ({files, className, color, children}) => {
         return <div className='w-full h-auto'>
-            { files.map((folder) => 
-                <Style file={folder} className={className} borderConfig={`border-b border-${color}`} key={folder.name}>
-                    {children}
+            { files.map((file) => 
+                <Style file={file} className={className} borderConfig={`border-b border-${color}`} key={file.name}>
+                    <OptionView.Componet nameFile={'file:  ' + file.name + '.' + file.type} item={file}/>                    
                 </Style>
             )}
         </div>
@@ -41,6 +41,7 @@ export namespace Files {
 
                     <div className="flex flex-row-reverse items-center" >
                         {children}
+
                     </div>
                 </div>
             </div>

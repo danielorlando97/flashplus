@@ -13,6 +13,7 @@ import { TopBar } from '../components/container.top.bar.between.space'
 import { DataLabel } from '../components/style.label.data'
 import { Folders } from './folders'
 import { Files } from './files'
+import { OptionView } from '../components/options.view'
 
 // Icons ////////////////////////////////////////////////////////////////
 import { MdNotificationsActive, MdNotificationsOff } from "react-icons/md"
@@ -35,15 +36,15 @@ const ButtomHome : FC = () => {
 const ButtomCopyList : FC = () => {
 	const [state, change] = useBooleanState(false)
 
-	if (state) return <IconsStyle.Component className={IconsStyle.compose('pt-2')} Component={CgPlayListRemove} size='5xl' onClick={change}/>
-	return <IconsStyle.Component className={IconsStyle.compose('pt-2')} Component={CgPlayListAdd} size='5xl' onClick={change}/>
+	if (state) return <IconsStyle.Component className={IconsStyle.compose('pt-2')} Component={CgPlayListRemove} size='5xl' onClick={() => change(!state)}/>
+	return <IconsStyle.Component className={IconsStyle.compose('pt-2')} Component={CgPlayListAdd} size='5xl' onClick={() => change(!state)}/>
 }
 
 const ButtomSubcribes : FC = () => {
 	const [state, change] = useBooleanState(false)
 
-	if (state) return <IconsStyle.Component Component={MdNotificationsOff} size='3xl' onClick={change}/>
-	return <IconsStyle.Component Component={MdNotificationsActive} size='3xl' onClick={change}/>
+	if (state) return <IconsStyle.Component Component={MdNotificationsOff} size='3xl' onClick={() => change(!state)}/>
+	return <IconsStyle.Component Component={MdNotificationsActive} size='3xl' onClick={() => change(!state)}/>
 }
 
 
@@ -57,7 +58,7 @@ export default function View() {
       return <div/>
     }
     return (
-        <div className='relative w-screen h-screen overflow-auto overscroll-none'>
+        <div className='relative flex flex-col w-screen h-screen'>
           <div className="w-srceen px-4 pt-3">
             <NameInBorder.Component name="PaqtTV+" className={NameInBorder.compose(NameSystem.compose('text-3xl'))}>
                 <CentralGridContainer.Component>
@@ -82,13 +83,13 @@ export default function View() {
               </TopBar.RightItems>
             </TopBar.BetweenSpace>
           </div>
-          <div className='w-full px-3'>
-            <Folders.Component className='mt-2 pb-1' folders={data.folder} next={nextHandler} color='back'>
-                <Folders.ButtomOpcion></Folders.ButtomOpcion>
-            </Folders.Component>
+          <div className='w-full h-full px-3 overflow-scroll overscroll-contain'>
+            <Folders.Component className='mt-2 pb-1' folders={data.folder} next={nextHandler} color='back'/>
+              
+          
             
             <Files.Component className='mt-2 pb-1' files={data.file} color='back'>
-                <Folders.ButtomOpcion></Folders.ButtomOpcion>
+              
             </Files.Component>
           </div>
         

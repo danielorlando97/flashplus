@@ -8,7 +8,8 @@ export class FoldersMapper implements IMapper<folderEntity, folderModel>{
         return {
             name : entity.name,
             len : entity.len,
-            size : entity.size
+            size : entity.size,
+            path : entity.path
         }
     }
     

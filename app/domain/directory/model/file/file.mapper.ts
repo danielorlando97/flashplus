@@ -12,7 +12,8 @@ export class FilesMapper implements IMapper<fileEntity, fileModel>{
         return {
             name : namelist.join('.'),
             type : type, 
-            size : entity.size
+            size : entity.size,
+            path:  entity.path
         }
     }
     

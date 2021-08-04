@@ -16,7 +16,7 @@ export namespace IconsStyle {
     }
 
     export const compose = (className: string, color: color = 'gray-100', opacity: opacity = '50') => {
-        return `stroke-current stroke-0 ${className} text-${color} text-opacity-${opacity}`
+        return ` ${className} text-${color} text-opacity-${opacity}`
     }
         
     Component.defaultProps = {

@@ -12,9 +12,9 @@ export class DirectoryMapper implements IMapper<directoryEntity, directoryModel>
         const folders : folderModel[] = []
         const files : fileModel[] = []
 
-        for(let folder of entity.folders) 
+        for(let folder of entity.folders) {
             folders.push(this.folderMapper.getModel(folder))
-
+        }
         for(let file of entity.files) 
             files.push(this.fileMapper.getModel(file))
 
@@ -23,6 +23,7 @@ export class DirectoryMapper implements IMapper<directoryEntity, directoryModel>
             file: files,
             inCopyList : false,
             inSubList : false,
+            name : entity.name
         }
     }
     
